@@ -1,31 +1,31 @@
 import React, { useState } from 'react';
-import engineEnhancement from '../assets/images/p29.png';
+import engineEnhancement from '../assets/images/gamepeople.jpg';
 import toolDevelopment from '../assets/images/p25.png';
-import renderingUpgrades from '../assets/images/p31.png';
-import performanceOptimization from '../assets/images/p32.png';
+import renderingUpgrades from '../assets/images/people2.jpg';
+import performanceOptimization from '../assets/images/people3.jpg';
 
 const tabs = [
   { 
-    id: 'engineEnhancement', 
-    label: 'Engine Enhancement', 
+    id: 'engine', 
+    label: 'ENGINE INNOVATION', 
     image: engineEnhancement, 
     description: 'Improve engine quality by modernizing engines, implementing cutting-edge features, and resolving bugs to ensure your game stays competitive in the market.' 
   },
   { 
-    id: 'toolDevelopment', 
-    label: 'Tool Development', 
+    id: 'tool', 
+    label: 'TOOLING ADVANCEMENT', 
     image: toolDevelopment, 
     description: 'Extend game life with DLC, expansions, and live events. We create powerful tools that empower your team to deliver continuous content updates.' 
   },
   { 
-    id: 'renderingUpgrades', 
-    label: 'Rendering Upgrades', 
+    id: 'rendering', 
+    label: 'RENDERING OPTIMIZATION', 
     image: renderingUpgrades, 
     description: 'Create engaging mechanics and immersive level designs with our advanced rendering solutions that push visual boundaries while maintaining performance.' 
   },
   { 
-    id: 'performanceOptimization', 
-    label: 'Performance Optimization', 
+    id: 'performance', 
+    label: 'SYSTEM PERFORMANCE EXCELLENCE', 
     image: performanceOptimization, 
     description: 'Develop new IPs and manage existing game franchises with our optimization expertise that ensures smooth gameplay across all target platforms.' 
   },
@@ -51,7 +51,7 @@ export default function OurExpertise1() {
                 onClick={() => setActiveTab(tab.id)}
                 className={`px-4 py-3 rounded-lg font-secondary transition-all duration-300 whitespace-nowrap text-sm sm:text-base font-medium ${
                   activeTab === tab.id
-                    ? 'bg-white text-orange-500 shadow-lg'
+                    ? 'bg-white text-[#b27b2b] shadow-lg'
                     : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
                 }`}
               >

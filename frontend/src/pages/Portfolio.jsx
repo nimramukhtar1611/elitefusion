@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import { motion, useAnimation, AnimatePresence } from 'framer-motion';
 import { Linkedin, Github, Twitter, Mail } from 'lucide-react';
+import homeBg from '../assets/images/darkplace.jpg';
 
 const teamMembers = [
   {
@@ -68,45 +69,44 @@ const TeamPortfolio = () => {
   const cursorRef = useRef(null);
 
   // Parallax effect
-  useEffect(() => {
-    const handleMouseMove = (e) => {
-      const { clientX, clientY } = e;
-      const { width, height, left, top } = bgRef.current.getBoundingClientRect();
-      const x = (clientX - left) / width - 0.5;
-      const y = (clientY - top) / height - 0.5;
+// useEffect(() => {
+//   const handleMouseMove = (e) => {
+//     const { clientX, clientY } = e;
+//     const { width, height, left, top } = bgRef.current.getBoundingClientRect();
+//     const x = (clientX - left) / width - 0.5;
+//     const y = (clientY - top) / height - 0.5;
       
-      controls.start({
-        x: x * 80,
-        y: y * 80,
-        transition: { type: 'spring', damping: 15, stiffness: 100 }
-      });
+//     controls.start({
+//       x: x * 80,
+//       y: y * 80,
+//       transition: { type: 'spring', damping: 15, stiffness: 100 }
+//     });
 
-      if (cursorRef.current) {
-        cursorRef.current.style.transform = `translate(${clientX}px, ${clientY}px) rotate(${x * 45}deg)`;
-      }
-    };
+//     if (cursorRef.current) {
+//       cursorRef.current.style.transform = `translate(${clientX}px, ${clientY}px) rotate(${x * 45}deg)`;
+//     }
+//   };
 
-    window.addEventListener('mousemove', handleMouseMove);
-    return () => window.removeEventListener('mousemove', handleMouseMove);
-  }, [controls]);
+//   window.addEventListener('mousemove', handleMouseMove);
+//   return () => window.removeEventListener('mousemove', handleMouseMove);
+// }, [controls]);
+
 
   return (
     <div className="relative overflow-hidden bg-gray-950 min-h-screen">
       {/* Gaming Background */}
-      <motion.div 
-        className="fixed inset-0 overflow-hidden"
-        animate={controls}
-        ref={bgRef}
-        style={{
-          background: 'radial-gradient(ellipse at center, #0f0c29 0%, #1a1a2e 50%, #000000 100%)'
-        }}
-      >
+     <motion.div 
+  ref={bgRef}
+  className="fixed inset-0 bg-cover bg-center z-0"
+  style={{
+    backgroundImage: `url(${homeBg})`,
+  }}
+/>
+
         {/* Animated elements */}
         <motion.div
           className="absolute inset-0"
-          animate={{
-            backgroundPosition: ['0% 0%', '100% 100%'],
-          }}
+           animate={controls}
           transition={{
             duration: 120,
             repeat: Infinity,
@@ -124,7 +124,7 @@ const TeamPortfolio = () => {
 
         {/* Floating elements */}
         <motion.div
-          className="absolute rounded-full bg-[#BA7A2B]"
+          className="absolute rounded-full bg-[#b27b2b]"
           style={{
             width: '400px',
             height: '400px',
@@ -148,7 +148,7 @@ const TeamPortfolio = () => {
         {[...Array(5)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-1 h-1 bg-[#BA7A2B] rounded-full"
+            className="absolute w-1 h-1 bg-[#b27b2b] rounded-full"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
@@ -167,7 +167,6 @@ const TeamPortfolio = () => {
             }}
           />
         ))}
-      </motion.div>
 
       {/* Custom Cursor */}
       <div 
@@ -194,7 +193,7 @@ const TeamPortfolio = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
           >
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#BA7A2B] to-[#D4A76A]">GAME</span> DEVELOPERS
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#b27b2b] to-[#eb9c2e]">GAME</span> DEVELOPERS
           </motion.h1>
           <motion.p 
             className="text-xl text-gray-300 max-w-3xl mx-auto font-secondary"
@@ -213,15 +212,15 @@ const TeamPortfolio = () => {
               key={member.id}
               initial={{ 
                 opacity: 0, 
-                y: 50,
-                scale: 0.8
+                y: 70,
+                scale: 0.10
               }}
               animate={{ 
                 opacity: 1, 
                 y: 0,
                 scale: 1,
                 transition: { 
-                  duration: 0.8, 
+                  duration: 0.10, 
                   delay: index * 0.15,
                   type: 'spring',
                   stiffness: 100,
@@ -234,7 +233,7 @@ const TeamPortfolio = () => {
                 boxShadow: '0 25px 50px -12px rgba(186, 122, 43, 0.25)',
                 transition: { duration: 0.3 }
               }}
-              className="bg-gray-900 bg-opacity-70 backdrop-blur-md rounded-xl overflow-hidden shadow-xl border border-gray-800 hover:border-[#BA7A2B] transition-all duration-300 cursor-pointer"
+              className="bg-gray-900 bg-opacity-70 backdrop-blur-md rounded-xl overflow-hidden shadow-xl border border-gray-800 hover:border-[#b27b2b] transition-all duration-300 cursor-pointer"
               onClick={() => setSelectedMember(member)}
             >
               <div className="relative h-64 overflow-hidden">
@@ -246,20 +245,20 @@ const TeamPortfolio = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80" />
                 <div className="absolute bottom-0 left-0 p-6">
                   <h3 className="text-2xl font-bold text-white font-primary">{member.name}</h3>
-                  <p className="text-[#BA7A2B] font-secondary">{member.role}</p>
+                  <p className="text-[#b27b2b] font-secondary">{member.role}</p>
                 </div>
-                <div className="absolute top-4 right-4 w-3 h-3 bg-[#BA7A2B] rounded-full animate-pulse" />
+                <div className="absolute top-4 right-4 w-3 h-3 bg-[#b27b2b] rounded-full animate-pulse" />
               </div>
               <div className="p-6">
                 <p className="text-gray-300 text-sm font-secondary line-clamp-2">{member.bio}</p>
                 <div className="flex mt-4 space-x-3">
-                  <button className="text-gray-400 hover:text-[#BA7A2B] transition-colors">
+                  <button className="text-gray-400 hover:text-[#b27b2b] transition-colors">
                     <Linkedin size={18} />
                   </button>
-                  <button className="text-gray-400 hover:text-[#BA7A2B] transition-colors">
+                  <button className="text-gray-400 hover:text-[#b27b2b] transition-colors">
                     <Github size={18} />
                   </button>
-                  <button className="text-gray-400 hover:text-[#BA7A2B] transition-colors">
+                  <button className="text-gray-400 hover:text-[#b27b2b] transition-colors">
                     <Twitter size={18} />
                   </button>
                 </div>
@@ -282,14 +281,14 @@ const TeamPortfolio = () => {
                 initial={{ scale: 0.9, y: 50, opacity: 0 }}
                 animate={{ scale: 1, y: 0, opacity: 1 }}
                 exit={{ scale: 0.9, y: 50, opacity: 0 }}
-                className="relative bg-gray-900 rounded-xl max-w-5xl w-full max-h-[90vh] overflow-y-auto border border-[#BA7A2B] shadow-2xl"
+                className="relative bg-gray-900 rounded-xl max-w-5xl w-full max-h-[90vh] overflow-y-auto border border-[#b27b2b] shadow-2xl"
                 onClick={(e) => e.stopPropagation()}
                 style={{
                   background: 'radial-gradient(ellipse at top, rgba(31,41,55,0.9) 0%, rgba(17,24,39,0.95) 100%)'
                 }}
               >
                 <button 
-                  className="absolute top-4 right-4 z-10 p-2 bg-gray-800 rounded-full hover:bg-[#BA7A2B] transition-colors"
+                  className="absolute top-4 right-4 z-10 p-2 bg-gray-800 rounded-full hover:bg-[#b27b2b] transition-colors"
                   onClick={() => setSelectedMember(null)}
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -307,9 +306,9 @@ const TeamPortfolio = () => {
                     <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80" />
                     <div className="absolute bottom-0 left-0 p-8">
                       <h2 className="text-4xl font-bold text-white font-primary">{selectedMember.name}</h2>
-                      <p className="text-[#BA7A2B] text-2xl font-secondary mt-2">{selectedMember.role}</p>
+                      <p className="text-[#b27b2b] text-2xl font-secondary mt-2">{selectedMember.role}</p>
                     </div>
-                    <div className="absolute top-8 left-8 w-4 h-4 bg-[#BA7A2B] rounded-full animate-pulse" />
+                    <div className="absolute top-8 left-8 w-4 h-4 bg-[#b27b2b] rounded-full animate-pulse" />
                   </div>
 
                   <div className="p-8">
@@ -326,7 +325,7 @@ const TeamPortfolio = () => {
                             <motion.span 
                               key={skill}
                               whileHover={{ scale: 1.05 }}
-                              className="px-4 py-2 bg-gray-800 rounded-full text-sm text-gray-200 hover:bg-[#BA7A2B] transition-colors font-secondary"
+                              className="px-4 py-2 bg-gray-800 rounded-full text-sm text-gray-200 hover:bg-[#b27b2b] transition-colors font-secondary"
                             >
                               {skill}
                             </motion.span>
@@ -339,19 +338,19 @@ const TeamPortfolio = () => {
                         <div className="flex space-x-4">
                           <motion.button 
                             whileHover={{ y: -3 }}
-                            className="p-3 bg-gray-800 rounded-full text-gray-300 hover:bg-[#BA7A2B] hover:text-white transition-colors"
+                            className="p-3 bg-gray-800 rounded-full text-gray-300 hover:bg-[#b27b2b] hover:text-white transition-colors"
                           >
                             <Linkedin size={20} />
                           </motion.button>
                           <motion.button 
                             whileHover={{ y: -3 }}
-                            className="p-3 bg-gray-800 rounded-full text-gray-300 hover:bg-[#BA7A2B] hover:text-white transition-colors"
+                            className="p-3 bg-gray-800 rounded-full text-gray-300 hover:bg-[#b27b2b] hover:text-white transition-colors"
                           >
                             <Mail size={20} />
                           </motion.button>
                           <motion.button 
                             whileHover={{ y: -3 }}
-                            className="p-3 bg-gray-800 rounded-full text-gray-300 hover:bg-[#BA7A2B] hover:text-white transition-colors"
+                            className="p-3 bg-gray-800 rounded-full text-gray-300 hover:bg-[#b27b2b] hover:text-white transition-colors"
                           >
                             <Github size={20} />
                           </motion.button>

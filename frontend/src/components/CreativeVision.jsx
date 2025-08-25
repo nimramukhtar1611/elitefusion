@@ -71,14 +71,13 @@ const CreativeVision = () => {
                 <div className="w-20 h-1 bg-gradient-to-r from-orange-500 to-orange-600 mb-6"></div>
               </div>
               <p className="text-gray-300 font-secondary text-lg leading-relaxed">
-                Tap on our co-development services, including level design, gameplay design, and remakes and adaptations.
-              </p>
+Master every phase of game creation, from concept and world-building to polished remasters and next-gen experiences.              </p>
               <ul className="space-y-4 text-gray-300 font-secondary">
                 {[
-                  { icon: adaptationIcon, text: "Adaptation" },
-                  { icon: postLaunchIcon, text: "Post Launch Content" },
-                  { icon: gameplayIcon, text: "Gameplay & Design" },
-                  { icon: gameIPIcon, text: "Game & IP Development" }
+                  { icon: adaptationIcon, text: "Transformation" },
+                  { icon: postLaunchIcon, text: "Expansion" },
+                  { icon: gameplayIcon, text: "Interaction" },
+                  { icon: gameIPIcon, text: "Innovation" }
                 ].map((item, index) => (
                   <li key={index} className="flex items-center gap-4 group hover:text-white transition-colors duration-300">
                     <div className="w-8 h-8 bg-gray-800 rounded-lg flex items-center justify-center group-hover:bg-orange-500 transition-colors duration-300">
@@ -111,7 +110,7 @@ const CreativeVision = () => {
                 <img src={darkSouls} alt="Dark Souls: Remastered" className="w-full h-64 object-cover"/>
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
                 <div className="absolute bottom-0 left-0 right-0 p-6 text-white flex justify-between items-center">
-                  <div>
+                  <div className='font-secondary'>
                     <h3 className="font-bold text-xl mb-1">Dark Souls: Remastered</h3>
                     <p className="text-gray-300">Bandai Namco Entertainment</p>
                   </div>
@@ -160,14 +159,13 @@ const CreativeVision = () => {
                 <div className="w-20 h-1 bg-gradient-to-r from-orange-500 to-orange-600 mb-6"></div>
               </div>
               <p className="text-gray-300 font-secondary text-lg leading-relaxed">
-                Address technical challenges in your development with cutting-edge tools, or refine gameplay, user interfaces and engines.
-              </p>
+Leverage our expertise and a suite of advanced tools to tackle complex development challenges and elevate your gaming experience.              </p>
               <ul className="space-y-4 text-gray-300 font-secondary">
                 {[
-                  { icon: engineEnhancementIcon, text: "Engine Enhancement" },
-                  { icon: toolDevelopmentIcon, text: "Tool Development" },
-                  { icon: renderingUpgradeIcon, text: "Rendering Upgrade" },
-                  { icon: performanceIcon, text: "Performance Optimisation" },
+                  { icon: engineEnhancementIcon, text: "Engine Innovation" },
+                  { icon: toolDevelopmentIcon, text: "Tool Advancement" },
+                  { icon: renderingUpgradeIcon, text: "Rendering ptimazation" },
+                  { icon: performanceIcon, text: "System Performance Excellence" },
                   { icon: featureDevIcon, text: "Feature Development" },
                   { icon: networkingIcon, text: "Networking & Infrastructure" }
                 ].map((item, index) => (
@@ -198,8 +196,7 @@ const CreativeVision = () => {
                 <div className="w-20 h-1 bg-gradient-to-r from-orange-500 to-orange-600 mb-6"></div>
               </div>
               <p className="text-gray-300 font-secondary text-lg leading-relaxed">
-                Realize your vision through concept art, or leverage the talent of art specialists as we deliver high-quality assets—and more—across your production pipeline.
-              </p>
+Harness a worldwide network of elite artists to realize your vision seamlessly across the full production pipeline — from concept to in-engine execution.              </p>
               <ul className="space-y-4 text-gray-300 font-secondary">
                 {[
                   { icon: standaloneArtIcon, text: "Standalone Art Content" },

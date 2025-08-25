@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import standAloneArtImage from '../assets/images/stellar_blade.png';
-import unifiedArtImage from '../assets/images/p2.png';
+import standAloneArtImage from '../assets/images/gamegirl.jpg';
+import unifiedArtImage from '../assets/images/gameboy1.jpg';
 
 const tabs = [
   {
@@ -91,7 +91,7 @@ export default function OurExpertise2() {
                 onClick={() => setActiveTab(tab.id)}
                 className={`px-4 py-3 rounded-lg transition-all duration-300 whitespace-nowrap text-sm sm:text-base font-medium ${
                   activeTab === tab.id
-                    ? 'bg-white text-orange-500 shadow-lg'
+                    ? 'bg-white text-[#b27b2b] shadow-lg'
                     : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
                 }`}
               >
@@ -135,7 +135,7 @@ export default function OurExpertise2() {
                   aria-expanded={item.expanded}
                 >
                   <h3 className="text-lg sm:text-xl font-bold">{item.title}</h3>
-                  <span className="ml-4 w-8 h-8 flex items-center justify-center rounded-full bg-orange-500 text-white font-bold select-none text-lg">
+                  <span className="ml-4 w-8 h-8 flex items-center justify-center rounded-full bg-[#b27b2b] text-white font-bold select-none text-lg">
                     {item.expanded ? '−' : '+'}
                   </span>
                 </button>

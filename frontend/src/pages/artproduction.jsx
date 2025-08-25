@@ -1,6 +1,6 @@
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import artProductionBg from '../assets/images/art-production.png';
+import artProductionBg from '../assets/images/artimage.jpg';
 import OurExpertise2 from '../components/OurExpertise2';
 import GameEngines from '../components/GameEngines';
 import LeadingDevelopers from '../components/LeadingDevelopers';
@@ -20,8 +20,7 @@ const ArtProduction = () => {
         <div className="relative z-10 max-w-5xl px-4 text-white">
           <h1 className="text-8xl font-extrabold mb-6 font-primary ">ART PRODUCTION</h1>
           <p className="text-2xl max-w-4xl mx-auto font-secondary">
-            Leverage a global network of talented artists to bring your vision to life across the entire 
-            production pipeline — from ideation to in-engine integration.
+            Harness a worldwide network of elite artists to realize your vision seamlessly across the full production pipeline — from concept to in-engine execution.
           </p>
         </div>
       </section>

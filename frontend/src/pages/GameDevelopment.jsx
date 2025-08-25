@@ -4,7 +4,7 @@ import GameEngines from '../components/GameEngines';
 import Footer from '../components/Footer';
 import LeadingDevelopers from '../components/LeadingDevelopers';
 import MakeBetter from '../components/MakeBetter';
-import servicesBg from '../assets/images/game-development.png';
+import servicesBg from '../assets/images/gamewar.jpg';
 import OtherServices1 from '../components/OtherServices1';
 import CardSlider from '../components/CardSlider';
 
@@ -20,8 +20,8 @@ export default function GameDevelopment() {
         <div className="relative z-10 max-w-5xl px-4 text-white">
           <h1 className="text-8xl font-extrabold mb-6 tracking-wide font-primary">GAME DEVELOPMENT</h1>
           <p className="text-xl max-w-3xl mx-auto font-secondary">
-            Unlock expertise for any stage of game development, from level and encounter design,
-            to full remakes and development, from the ground up.
+           Master every phase of game creation, from concept and world-building to
+            polished remasters and next-gen experiences.
           </p>
         </div>
       </section>

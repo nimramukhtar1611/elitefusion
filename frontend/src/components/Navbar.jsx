@@ -42,7 +42,7 @@ const Navbar = () => {
       submenu: [
         { title: 'Game Development', href: '/game-development' },
         { title: 'Engineering', href: '/engineering' },
-        { title: 'Art Production', href: '/art-production' },
+        { title: 'Art Production', href: '/artproduction' },
       ]
     },
     { title: 'Our Works', bg: worksBg, href: '/our-work' },
@@ -73,54 +73,25 @@ const Navbar = () => {
         </div>
 
         {/* Logo - Changed to Link */}
-        <div className="flex-grow flex justify-center">
-          <Link to="/">
-            <img src={logoImg} alt="Virtuos Logo" className="h-20 md:h-32 object-contain" />
-          </Link>
-        </div>
+    <div className="flex-grow flex justify-center md:ml-28">
+  <Link to="/">
+    <img src={logoImg} alt="Virtuos Logo" className="h-20 md:h-32 object-contain" />
+  </Link>
+</div>
+
 
         {/* Right Side */}
         <div className="flex items-center gap-4 text-sm md:text-base font-medium">
           {/* Languages */}
-          <div className="relative">
-            <button onClick={() => setLangOpen(!langOpen)} className="flex items-center gap-1 hover:text-[#BA7A2B] transition">
-              <span className="uppercase">English</span>
-              <svg className="w-3 h-3 fill-current" viewBox="0 0 320 512">
-                <path d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 
-                0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 
-                33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 
-                24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 
-                9.4 24.6 0 33.9l-136 136c-9.2 
-                9.4-24.4 9.4-33.8 0z" />
-              </svg>
-            </button>
-            {langOpen && (
-              <ul className="absolute right-0 mt-2 bg-white border rounded shadow text-sm z-50 text-black">
-                {[
-                  ['Chinese', '/zh'],
-                  ['Japanese', '/ja'],
-                  ['Vietnamese', '/vi'],
-                  ['Korean', '/ko'],
-                  ['French', '/fr'],
-                ].map(([name, path]) => (
-                  <li key={path}>
-                    <Link
-                      to={path}
-                      className="block px-4 py-2 hover:bg-gray-100 transition"
-                      onClick={() => setLangOpen(false)}
-                    >
-                      {name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            )}
-          </div>
+        {/* Language fixed */}
+<div className="relative">
+  <span className="uppercase text-white">English</span>
+</div>
 
           {/* Contact Button - Changed to Link */}
           <Link
             to="/contact-us"
-            className="hidden md:inline-block text-[#BA7A2B] uppercase text-sm md:text-base font-semibold px-5 py-2 hover:opacity-75 transition tracking-wide"
+            className="hidden md:inline-block text-[#B27b2b] uppercase text-sm md:text-base font-semibold px-5 py-2 hover:opacity-75 transition tracking-wide"
             style={{ textShadow: '0 0 12px #ffc695' }}
           >
             Contact Us
@@ -147,7 +118,7 @@ const Navbar = () => {
                 setMenuOpen(false);
                 setCurrentBg(bgImg); 
               }}
-              className="text-4xl font-bold hover:text-[#BA7A2B] transition duration-300"
+              className="text-4xl font-bold hover:text-[#B27b2b] transition duration-300"
             >
               &times;
             </button>

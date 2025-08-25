@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import engineeringBg from '../assets/images/engineering.png';
+import engineeringBg from '../assets/images/engineeringplace.jpg';
 import OurExpertise from '../components/OurExpertise1';
 import GameEngines from '../components/GameEngines';
 import LeadingDevelopers from '../components/LeadingDevelopers';
@@ -21,8 +21,7 @@ function Engineering() {
         <div className="relative z-10 max-w-5xl px-4 text-white">
           <h1 className="text-8xl font-extrabold mb-6 tracking-wide font-primary">ENGINEERING</h1>
           <p className="text-2xl max-w-3xl mx-auto font-secondary">
-            Harness expertise and an array of cutting-edge tools to address technical development
-            challenges and elevate your game
+            Leverage our expertise and a suite of advanced tools to tackle complex development challenges and elevate your gaming experience.
           </p>
         </div>
       </section>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const portfolioItems = [
   { id: 8700, title: 'Judas', client: 'Ghost Story Games', image: 'https://as2.ftcdn.net/v2/jpg/07/91/72/11/1000_F_791721174_OKOwj2uaP5LDrY3Ft83oFx7x0aFxqCSU.jpg' },
@@ -33,32 +34,36 @@ const OurWork = () => {
       {/* Nav Tabs */}
       <nav className="flex justify-center mb-12">
         <ul className="flex gap-4 sm:gap-6 md:gap-10 px-6 py-3 rounded-full shadow-md text-sm md:text-base">
-          <li><a href="/works/" className="hover:text-orange-600 text-white font-medium">All</a></li>
-          <li><a href="/projects" className="text-orange-500 border-b-2 border-orange-400 font-bold">Projects</a></li>
-          <li><a href="/success-stories" className="hover:text-orange-600 text-white font-medium">Success Stories</a></li>
-          <li><a href="/market-insights/" className="hover:text-orange-600 text-white font-medium">Market Insights</a></li>
+          <li><a href="/works/" className="hover:text-[#b27b2b] text-white font-medium">All</a></li>
+          <li><a href="/projects" className="text-[#b27b2b] border-b-2 border-orange-400 font-bold font-secondary">Projects</a></li>
+          <li><a href="/success-stories" className="hover:text-[#b27b2b] text-white font-medium font-secondary">Success Stories</a></li>
+          <li><a href="/market-insights/" className="hover:text-[#b27b2b] text-white font-medium font-secondary">Market Insights</a></li>
         </ul>
       </nav>
 
       {/* Portfolio Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto px-2">
         {portfolioItems.map((item) => (
-          <div
-            key={item.id}
-            className="relative overflow-hidden rounded-xl shadow-lg group portfolio-box"
-            style={{ minHeight: '300px' }}
-          >
-            <img
-              src={item.image}
-              alt={item.title}
-              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-            />
-            <div className="absolute inset-0 bg-black/50 flex flex-col justify-end p-5 transition-opacity duration-300 group-hover:bg-black/70">
-              <h4 className="text-xl font-bold mb-1 text-white drop-shadow-md">{item.title}</h4>
-              <p className="text-sm italic text-gray-200">{item.client}</p>
-            </div>
-          </div>
-        ))}
+  <div key={item.id} className="relative overflow-hidden rounded-xl shadow-lg group portfolio-box" style={{ minHeight: '300px' }}>
+    {item.title === 'Judas' ? (
+      <Link to="/judasDetail" >
+        <img src={item.image} alt={item.title} className=" font-primary w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+        <div className="absolute inset-0 bg-black/50 flex flex-col justify-end p-5 transition-opacity duration-300 group-hover:bg-black/70">
+          <h4 className="text-xl font-bold mb-1 text-white font-secondry drop-shadow-md">{item.title}</h4>
+          <p className="text-sm italic font-secondary text-gray-200">{item.client}</p>
+        </div>
+      </Link>
+    ) : (
+      <>
+        <img src={item.image} alt={item.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+        <div className="absolute inset-0 bg-black/50 flex flex-col justify-end p-5 transition-opacity duration-300 group-hover:bg-black/70">
+          <h4 className="text-xl font-bold mb-1 text-white drop-shadow-md">{item.title}</h4>
+          <p className="text-sm italic text-gray-200">{item.client}</p>
+        </div>
+      </>
+    )}
+  </div>
+))}
       </div>
 
    

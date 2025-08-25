@@ -14,16 +14,16 @@ const Careers = () => {
       <div className="relative z-10 max-w-6xl mx-auto">
         {/* Header with a refined, glowing effect */}
         <h1 className="text-5xl sm:text-7xl font-extrabold mb-8 text-center text-white font-primary tracking-tight">
-          Join the <span className="bg-clip-text text-transparent bg-gradient-to-r from-orange-400 to-orange-600">Elite Fusion</span> Revolution
+          Join the <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#B27b2b] to-[#e79822]">Elite Fusion</span> Revolution
         </h1>
 
         <p className="text-lg sm:text-xl mb-12 text-center text-gray-200 font-secondary leading-relaxed max-w-3xl mx-auto">
-          At <span className="text-orange-400 font-bold">Elite Fusion</span>, we forge unforgettable gaming experiences powered by blockchain innovation. Join our visionary team to shape the future of interactive entertainment.
+          At <span className="text-[#B27b2b] font-bold">Elite Fusion</span>, we forge unforgettable gaming experiences powered by blockchain innovation. Join our visionary team to shape the future of interactive entertainment.
         </p>
 
         {/* Why Join Us Section */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-orange-400 font-primary mb-8 text-center tracking-wide">Why Choose Elite Fusion?</h2>
+          <h2 className="text-3xl font-bold text-[#B27b2b] font-primary mb-8 text-center tracking-wide">Why Choose Elite Fusion?</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
               {
@@ -47,7 +47,7 @@ const Careers = () => {
                 key={index}
                 className="bg-gray-900/60 p-8 rounded-2xl shadow-xl border border-orange-500/20 hover:border-orange-500/50 hover:shadow-orange-500/30 transition-all duration-300"
               >
-                <h3 className="text-xl font-semibold text-orange-400 font-primary mb-3">{item.title}</h3>
+                <h3 className="text-xl font-semibold text-[#B27b2b] font-secondry mb-3">{item.title}</h3>
                 <p className="text-gray-300 font-secondary">{item.desc}</p>
               </div>
             ))}
@@ -56,7 +56,7 @@ const Careers = () => {
 
         {/* Open Roles Section */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-orange-400 font-primary mb-8 text-center tracking-wide">Open Roles</h2>
+          <h2 className="text-3xl font-bold text-[#B27b2b] font-primary mb-8 text-center tracking-wide">Open Roles</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               'Game Developers (Unity / Unreal)',
@@ -68,9 +68,9 @@ const Careers = () => {
             ].map((role, index) => (
               <div
                 key={index}
-                className="relative bg-gray-800/70 p-6 rounded-xl shadow-lg border border-orange-500/20 hover:border-orange-500 hover:scale-105 transform transition-all duration-300 group"
+                className="relative bg-gray-800/70 p-6 rounded-xl shadow-lg border border-orange-500/20 hover:border-[#B27b2b] hover:scale-105 transform transition-all duration-300 group"
               >
-                <span className="text-lg font-medium text-gray-100 font-secondary group-hover:text-orange-400">{role}</span>
+                <span className="text-lg font-medium text-gray-100 font-secondary group-hover:text-[#B27b2b]">{role}</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
               </div>
             ))}
@@ -79,10 +79,10 @@ const Careers = () => {
 
         {/* Call to Action */}
         <div className="text-center mt-12">
-          <p className="mb-6 text-xl font-semibold text-gray-100 font-primary">Ready to Shape the Future of Gaming?</p>
+          <p className="mb-6 text-xl font-semibold text-gray-100 font-secondry">Ready to Shape the Future of Gaming?</p>
           <a
             href="mailto:careers@elitefusion.games"
-            className="inline-block bg-orange-500 text-white font-bold px-10 py-4 rounded-full font-primary hover:bg-orange-600 hover:scale-105 transition-all duration-300 shadow-lg shadow-orange-500/30"
+            className="inline-block bg-[#B27b2b] text-white font-bold px-10 py-4 rounded-full font-secondry hover:bg-[#e48d0a] hover:scale-105 transition-all duration-300 shadow-lg shadow-orange-500/30"
           >
             Apply Now
           </a>

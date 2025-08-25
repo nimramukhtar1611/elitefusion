@@ -16,7 +16,7 @@ const GameJamesContent = () => {
         className={`${themeClasses.bg} min-h-screen flex items-center justify-center`}
       >
         <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#B27B2B] mx-auto mb-4"></div>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#B27b2b] mx-auto mb-4"></div>
           <p className={themeClasses.text}>Loading Game Jams...</p>
         </div>
       </div>

@@ -1,67 +1,67 @@
 import React, { useState } from 'react';
-import adaptationImage from '../assets/images/neir-automata.jpg';
-import postLaunchImage from '../assets/images/p27.png';
-import gameplayImage from '../assets/images/p17.png';
-import gameIPImage from '../assets/images/p28.png';
+import adaptationImage from '../assets/images/armywar.jpg';
+import postLaunchImage from '../assets/images/zombiearmy.jpg';
+import gameplayImage from '../assets/images/childrenplaying.jpg';
+import gameIPImage from '../assets/images/3ideal.jpg';
 
 const tabs = [
-  { id: 'adaptation', label: 'ADAPTATION', image: adaptationImage },
-  { id: 'postLaunch', label: 'POST-LAUNCH CONTENT', image: postLaunchImage },
-  { id: 'gameplay', label: 'GAMEPLAY & DESIGN', image: gameplayImage },
-  { id: 'gameip', label: 'GAME & IP DEVELOPMENT', image: gameIPImage },
+  { id: 'adaptation', label: 'TRANSFORMATION', image: adaptationImage },
+  { id: 'postLaunch', label: 'EXPANSION', image: postLaunchImage },
+  { id: 'gameplay', label: 'INTERACTION', image: gameplayImage },
+  { id: 'gameip', label: 'INNOVATION', image: gameIPImage },
 ];
 
 const detailsData = {
   adaptation: [
     {
       title: 'Remakes and Remasters',
-      description: 'Modernize existing games from quality-of-life upgrades to redesigning gameplay.',
+      description: 'Elevating classics with modern design and innovation.',
       expanded: true,
     },
     {
-      title: 'Simultaneous/Post-Launch Ports',
-      description: 'Port games to multiple platforms simultaneously or post-launch.',
+     title: "Cross-Platform Ports",
+description: "Deliver games seamlessly across multiple platforms, either at launch or after release.",
       expanded: false,
     },
     {
-      title: 'Culturalization',
-      description: 'Adapt games to different cultures and regions.',
+     title: "Culturalization",
+description: "Tailor games to resonate with diverse cultures, languages, and regional values.",
       expanded: false,
     },
   ],
   postLaunch: [
     {
-      title: 'DLC and Expansions',
-      description: 'Create additional content to extend game life.',
+      title: "DLC & Expansions",
+description: "Develop fresh content and features to keep players engaged long after launch.",
       expanded: false,
     },
     {
-      title: 'Live Events',
-      description: 'Design and manage in-game live events.',
+      title: "Live Events",
+description: "Create and manage dynamic in-game events that keep players engaged in real time.",
       expanded: false,
     },
   ],
   gameplay: [
     {
-      title: 'Mechanics Design',
-      description: 'Develop engaging gameplay mechanics.',
+     title: "Mechanics Design",
+description: "Craft innovative gameplay mechanics that keep players immersed and challenged.",
       expanded: false,
     },
     {
-      title: 'Level Design',
-      description: 'Create immersive and challenging levels.',
+     title: "Level Design",
+description: "Build immersive worlds and challenging levels that keep players engaged.",
       expanded: false,
     },
   ],
   gameip: [
     {
-      title: 'Original IP Creation',
-      description: 'Develop new game concepts and intellectual properties.',
+      title: "Original IP Creation",
+description: "Bring fresh game concepts to life with unique stories, worlds, and mechanics.",
       expanded: false,
     },
     {
-      title: 'Franchise Management',
-      description: 'Manage and expand existing game franchises.',
+      title: "Franchise Management",
+description: "Manage, evolve, and expand established game franchises into lasting legacies.",
       expanded: false,
     },
   ],
@@ -99,7 +99,7 @@ export default function OurExpertise() {
                 onClick={() => setActiveTab(tab.id)}
                 className={`px-4 py-3 rounded-lg font-secondary transition-all duration-300 whitespace-nowrap text-sm sm:text-base font-medium ${
                   activeTab === tab.id
-                    ? 'bg-white text-orange-500 shadow-lg'
+                    ? 'bg-white text-[#B27b2b] shadow-lg'
                     : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
                 }`}
               >
@@ -137,13 +137,13 @@ export default function OurExpertise() {
                   className="flex justify-between items-center w-full text-left"
                   aria-expanded={item.expanded}
                 >
-                  <h3 className="text-lg sm:text-xl font-semibold">{item.title}</h3>
-                  <span className="ml-4 w-7 h-7 flex items-center justify-center rounded-full bg-orange-500 text-white font-bold select-none text-lg">
+                  <h3 className="text-lg sm:text-xl font-semibold font-secondary">{item.title}</h3>
+                  <span className="ml-4 w-7 h-7 flex items-center justify-center rounded-full bg-[#B27b2b] text-white font-bold select-none text-lg">
                     {item.expanded ? '−' : '+'}
                   </span>
                 </button>
                 {item.expanded && (
-                  <p className="mt-3 text-gray-300 leading-relaxed text-base sm:text-lg">
+                  <p className="mt-3 text-gray-300 leading-relaxed font-secondary text-base sm:text-lg">
                     {item.description}
                   </p>
                 )}

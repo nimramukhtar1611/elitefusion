@@ -1,80 +1,79 @@
 import React, { useState, useEffect, useRef } from "react";
-import Dev1 from "../assets/Dev/Dev1.webp";
-import Dev2 from "../assets/Dev/Dev2.webp";
-import Dev3 from "../assets/Dev/Dev3.webp";
-import Dev4 from "../assets/Dev/Dev4.webp";
-import Dev5 from "../assets/Dev/Dev5.webp";
-import Dev6 from "../assets/Dev/Dev6.webp";
-import Dev7 from "../assets/Dev/Dev7.webp";
-import Dev8 from "../assets/Dev/Dev8.webp";
+import Dev1 from "../assets/images/logo1.png"
+import Dev2 from "../assets/images/logo12.png"
+import Dev3 from "../assets/Dev/Dev1.webp";
+import Dev4 from "../assets/images/logo14.png"
+import Dev5 from "../assets/images/logo15.png"
+import Dev6 from "../assets/images/logo16.png"
+import Dev7 from "../assets/images/logo17.png"
+import Dev8 from "../assets/images/logo18.png"
 
 const testimonials = [
   {
-    quotation: "“" ,
-    quote: "Virtuos delivered excellent quality on time and at competitive rate. They are a pleasure to work with.",
-    name: "CrysDale Matthew",
-    title: "Art Director",
+    quotation: "“",
+    quote: "Elite Fusion delivered excellent quality on time and with unmatched professionalism. Their creative team is a pleasure to collaborate with.",
+    name: "HIDEO KOJIMA",
+    title: "GAME DESIGNER & DIRECTOR",
     logo: Dev1,
-    alt: "2K Logo",
+    alt: "konami Productions Logo",
   },
   {
-    quotation: "“" ,
-    quote: "As our preferred vendor, Virtuos is a strong partner which we can rely on to help us in our game development.",
-    name: "Jean-Marc Pereira",
-    title: "Outsourcing Manager",
+    quotation: "“",
+    quote: "As our preferred partner, Elite Fusion consistently provides innovative solutions, helping us achieve our game development goals efficiently.",
+    name: "SHIGERU MIYAMOTO",
+    title: "GAME DESIGNER",
     logo: Dev2,
-    alt: "Eidos Montreal Logo",
+    alt: "Nintendo Logo",
   },
   {
-    quotation: "“" ,
-    quote: "It has been proven more than once, that Virtuos is able to react quickly, flexibly and innovatively on all our requests. Thanks for providing high quality on all levels.",
-    name: "JULIA SCHNEIDER ",
-    title: "HEAD OF ART ",
+    quotation: "“",
+    quote: "It has been proven more than once that Elite Fusion reacts quickly, flexibly, and creatively to all our requests. They deliver high-quality results every time.",
+    name: "SID MEIER",
+    title: "GAME DESIGNER & PROGRAMMER",
     logo: Dev3,
-    alt: "2K Logo",
+    alt: "2K "
   },
   {
-    quotation: "“" ,
-    quote: "Virtuos has been solid in their delivery of high quality assets in a timely manner as well as a great working relationship for several years. I hope to continue our working relationship on future projects. ",
-    name: "YAYOI MARUNO ",
-    title: "DEVELOPMENT DIRECTOR",
+    quotation: "“",
+    quote: "Elite Fusion has been reliable in delivering high-quality assets on schedule and maintaining an excellent working relationship. We look forward to future collaborations.",
+    name: "GABE NEWELL",
+    title: "CO-FOUNDER & CEO",
     logo: Dev4,
-    alt: "Eidos Montreal Logo",
+    alt: "Valve Logo",
   },
   {
-    quotation: "“" ,
-    quote: "It has been a smooth production with Virtuos and we will be glad to engage again for our next production. ",
-    name: "TUUKKA TAIPALVESI ",
-    title: "EXECUTIVE PRODUCER ",
+    quotation: "“",
+    quote: "Production with Elite Fusion has been seamless. We are excited to continue engaging with them for upcoming projects.",
+    name: "JOSEF FARES",
+    title: "GAME DESIGNER & DIRECTOR",
     logo: Dev5,
-    alt: "2K Logo",
+    alt: "Hazelight Studios Logo",
   },
   {
-    quotation: "“" ,
-    quote: "Virtuos quickly ramped up to our schedule and artistic visual style, which resulted in a highly successful collaboration for our studio. ",
-    name: "STEPHEN ROYER ",
-    title: "ART DIRECTOR",
+    quotation: "“",
+    quote: "Elite Fusion quickly adapted to our schedule and visual style, resulting in a highly successful collaboration for our studio.",
+    name: "JENOVA CHEN",
+    title: "GAME DESIGNER & DIRECTOR",
     logo: Dev6,
-    alt: "Eidos Montreal Logo",
+    alt: "Thatgamecompany Logo",
   },
   {
-    quotation: "“" ,
-    quote: "The team at Virtuos has been a team of great collaborators who are always transparent with their process and progress, always striving for and meeting a high bar. I look forward to our continued partnership with this great team of developers.",
-    name: "JORGE OSEGUERA",
-    title: "SENIOR PRODUCER ",
+    quotation: "“",
+    quote: "The team at Elite Fusion demonstrates transparency, creativity, and a high standard of work. We look forward to an ongoing partnership with this outstanding team.",
+    name: "YOKO TARO",
+    title: "GAME DESIGNER & DIRECTOR",
     logo: Dev7,
-    alt: "2K Logo",
+    alt: "PlatinumGames Logo",
   },
   {
-    quotation: "“" ,
-    quote: "Virtuos delivered excellent quality on time and at competitive rate. They are a pleasure to work with. ",
-    name: "CRYSDALE MATTHEW ",
-    title: "ART DIRECTOR",
+    quotation: "“",
+    quote: "Elite Fusion consistently delivers top-quality work on time and with exceptional professionalism. Collaborating with them is a true pleasure.",
+    name: "SHINJI MIKAMI",
+    title: "GAME DESIGNER & DIRECTOR",
     logo: Dev8,
-    alt: "Eidos Montreal Logo",
+    alt: "Capcom Logo",
   },
 ];
-
 const LeadingDevelopers = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const containerRef = useRef(null);
@@ -88,10 +87,10 @@ const LeadingDevelopers = () => {
   }, []);
 
   return (
-    <section className="bg-[#2a2a2b] py-12 px-6 max-w-[90rem] mx-auto overflow-hidden relative" style={{ fontFamily: '"Antonio", Sans-serif' }}>
+    <section className="bg-[#2a2a2b] py-12 px-6 max-w-[90rem] mx-auto overflow-hidden relative " >
       <div className="font-primary">
-          <h1 className="text-6xl text-white mb-4" style={{ textAlign: "center", fontWeight: "bold" }}>LEADING DEVELOPERS</h1>
-          <h1 className="text-6xl text-white mb-4" style={{ textAlign: "center", fontWeight: "bold"  }}>TRUST US TO DELIVER</h1>
+          <h1 className="text-6xl text-white mb-4 font-primary" style={{ textAlign: "center", fontWeight: "bold" }}>Empowering Developers </h1>
+          <h1 className="text-6xl text-white mb-4 font-primary" style={{ textAlign: "center", fontWeight: "bold"  }}>With Trusted Solutions</h1>
         </div>
       <div
         ref={containerRef}
@@ -104,7 +103,7 @@ const LeadingDevelopers = () => {
         {testimonials.map((item, index) => (
           <div
             key={index}
-            className="bg-[#2E424D] p-6 rounded-lg shadow-md text-white flex-shrink-0 flex flex-col justify-between"
+            className="bg-[#2E424D]  p-6 rounded-lg shadow-md text-white flex-shrink-0 flex flex-col justify-between"
             style={{ width: "500px", height: "450px" }}
           >
             <h1
@@ -113,7 +112,7 @@ const LeadingDevelopers = () => {
                 paddingTop: "25px",
                 border: "2px solid #37370",
                 borderRadius: "50%",
-                backgroundColor: "#004459",
+                backgroundColor: "#2b2c2c",
                 width: "60px",
                 height: "60px",
                 textAlign: "center",
@@ -123,12 +122,12 @@ const LeadingDevelopers = () => {
             >
               {item.quotation}
             </h1>
-            <p className="mb-6 text-lg leading-relaxed text-ellipsis max-h-[200px]" style={{ whiteSpace: "normal" }}>{item.quote}</p>
+            <p className="mb-6 text-2xl leading-relaxed font-secondry text-ellipsis max-h-[250px]" style={{ whiteSpace: "normal" }}>{item.quote}</p>
             <div className="flex items-center space-x-4 mt-auto" style={{ paddingBottom: "30px" }}>
               <img src={item.logo} alt={item.alt} className="w-16 h-16 object-contain rounded" />
               <div>
-                <p className="font-bold uppercase tracking-wide truncate max-w-[200px]">{item.name}</p>
-                <p className="text-sm text-gray-300 truncate max-w-[200px]">{item.title}</p>
+                <p className="font-bold uppercase tracking-wide font-secondry truncate max-w-[200px]">{item.name}</p>
+                <p className="text-sm text-gray-300 truncate font-secondry max-w-[200px]">{item.title}</p>
               </div>
             </div>
           </div>
@@ -141,7 +140,7 @@ const LeadingDevelopers = () => {
           <button
             key={idx}
             className={`w-4 h-4 rounded-full ${
-              idx === currentIndex ? "bg-[#DC7D28]" : "bg-white"
+              idx === currentIndex ? "bg-[#B27b2b]" : "bg-white"
             }`}
             onClick={() => setCurrentIndex(idx)}
           />

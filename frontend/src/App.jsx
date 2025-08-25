@@ -29,7 +29,7 @@ import ProtectedRoute from './components/Auth/ProtectedRoute.jsx';
 import DevLogs from './pages/DevLogs.jsx';
 import DevLogDetail from './pages/DevLogDetail.jsx';
 import DevlogCreate from './pages/DevLogCreate.jsx';
-
+import Jodas from './pages/Jodas.jsx';
 function Layout() {
   return <Outlet />;
 }
@@ -42,6 +42,8 @@ export default function App() {
           {/* Main Routes */}
           <Route path="/" element={<Home />} />
           <Route path="/game-development" element={<GameDevelopment />} />
+                    <Route path="/judasDetail" element={<Jodas />} />
+
           <Route path="/engineering" element={<Engineering />} />
           <Route path="/artproduction" element={<ArtProduction />} />
           <Route path="/our-services" element={<OurServices />} />

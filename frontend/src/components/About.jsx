@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import dinasor from '../assets/images/dinasor.jpg';
+import dinasor from '../assets/images/fantasymonster.jpg';
 import homeoverlay from '../assets/images/home-hero-btm-overlay.webp';
 
 const About = () => {
@@ -42,20 +42,23 @@ const About = () => {
   }, []);
 
   return (
-    <section
-      id="about-section"
-      className="relative w-full bg-cover bg-center bg-no-repeat text-white overflow-x-hidden"
-      style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), url(${dinasor})`,
-        minHeight: '100vh',
-      }}
-    >
+   <section
+  id="about-section"
+  className="relative w-full text-white overflow-hidden"
+  style={{ minHeight: "100vh" }}
+>
+  {/* Background Image */}
+  <div
+    className="absolute inset-0 bg-cover bg-center"
+    style={{ backgroundImage: `url(${dinasor})` }}
+  ></div>
+  <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-black/30"></div>
       {/* Animated Particles Background */}
       <div className="absolute inset-0 z-0 opacity-20">
         {[...Array(30)].map((_, i) => (
           <div 
             key={i}
-            className="absolute rounded-full bg-[#BA7A2B]"
+            className="absolute rounded-full bg-[#B27b2b]"
             style={{
               width: `${Math.random() * 5 + 1}px`,
               height: `${Math.random() * 5 + 1}px`,
@@ -92,15 +95,15 @@ const About = () => {
               That Engage and Inspire
             </h1>
 
-            <p className="text-base sm:text-lg md:text-xl leading-relaxed text-gray-300 font-secondary">
-              Founded in 2004 and headquartered in Singapore with over<br />
-              4200 employees across 25 offices in Asia, Europe, and<br />
-              North America, Virtuos is one of the largest independent<br />
-              video game development companies. Specializing in full-cycle<br />
-              game development and art production, we have delivered<br />
-              high-quality content for over 1,500 games across all<br />
-              platforms, working with 23 of the top 25 gaming<br />
-              companies worldwide.
+            <p className="text-base sm:text-lg md:text-xl leading-relaxed text-gray-300  font-secondry">
+              We are a team of game makers who build cool games for <br />
+              mobile phones, computer, consoles and even the metaverse. <br />
+            We make all kind of games - for one single player , adventures to  <br />
+            multiplayer games where people from around the world can play ! <br />
+             <br />
+             We use new technology like : NFTs, tokens and web3 to make games <br />
+            that are part of the future. Our goal is to help kids and teenagers<br />
+            to learn , how games are made <br />
             </p>
           </div>
         </div>

@@ -100,7 +100,7 @@ const CardSlider = () => {
           width: 30px;
           height: 5px;
           border-radius: 9999px;
-          background: #BA7A2B;
+          background: #B27b2b;
           opacity: 1;
         }
       `}</style>
