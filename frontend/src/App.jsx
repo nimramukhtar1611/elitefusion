@@ -16,7 +16,7 @@ import GameJames from './pages/GameJames';
 import UploadGames from './components/UploadGames';
 import ContactForm from './components/Contact';
 import GithubLoginButton from './pages/GithubLoginButton';
-import Register from './pages/Register';
+import Register from './pages/Register.jsx'
 import Login from './pages/Login';
 import BrowseGames from './pages/BrowseGames';
 // (optional) if you added details page:
@@ -30,6 +30,8 @@ import DevLogs from './pages/DevLogs.jsx';
 import DevLogDetail from './pages/DevLogDetail.jsx';
 import DevlogCreate from './pages/DevLogCreate.jsx';
 import Jodas from './pages/Jodas.jsx';
+import RegisterForm from './components/Auth/SignUp.jsx';
+
 function Layout() {
   return <Outlet />;
 }
@@ -45,6 +47,7 @@ export default function App() {
                     <Route path="/judasDetail" element={<Jodas />} />
 
           <Route path="/engineering" element={<Engineering />} />
+
           <Route path="/artproduction" element={<ArtProduction />} />
           <Route path="/our-services" element={<OurServices />} />
           <Route path="/portfolio" element={<Portfolio />} />
@@ -96,8 +99,8 @@ export default function App() {
 
           {/* Auth Routes */}
           <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
           <Route path="/signupgithub" element={<GithubLoginButton />} />
+          <Route path="/signup" element={<Register />} />
 
           {/* Fallback */}
           <Route path="*" element={<Home />} />
